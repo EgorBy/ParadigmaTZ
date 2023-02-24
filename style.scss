@@ -1,5 +1,6 @@
 $font-stack: Manrope, sans-serif;
 $primary-color: #2A2A2A;
+$text-hover-color: #d91967;
 
 *,
 *:before,
@@ -32,10 +33,11 @@ body {
 }
 
 //HEADER--HEADER--HEADER--HEADER--HEADER--HEADER--HEADER--HEADER
-.top-header {
+.header-top {
   display: flex;
+  justify-content: space-between;
   padding: 1.1458vw 0;
-  border-bottom: 1px solid rgba(42, 42, 42, 0.15);
+  border-bottom: 0.052083333vw solid rgba(42, 42, 42, 0.15);
   background-color: #fff;  
 
   &__description,
@@ -57,7 +59,15 @@ body {
   }
 
   &__logo {
+    width: 11.09375vw;
+    height: 2.604166667vw;
     margin-right: 1.197916667vw;
+
+    img {
+      width: 100%;
+      height: 100%;
+      
+    }
   }
 
   &__description {
@@ -76,6 +86,16 @@ body {
     line-height: 0.9375vw;
     margin-right: 2.96875vw;
 
+    &-icon {
+      width: 1.822916667vw;
+      height: 1.822916667vw;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     &-text {
       max-width: 8.177vw;
       text-align: left;
@@ -87,19 +107,27 @@ body {
     cursor: pointer;
     font-weight: 700;
     font-size: 0.572916667vw;
-    line-height: 0.78125vw;
+    line-height: 0.88125vw;
     letter-spacing: 0.05em;
     margin-right: 2.96875vw;
 
+    &-icon {
+      img {
+        width: 0.625vw;
+        height: 0.78125vw;
+      }
+    }
+
     .map-modal {
+      display: none;
       opacity: 0;
       position: absolute;
       width: 26.041666667vw;
       height: 20.833333333vw;
       background-color: #fff;
       box-shadow: 3px 0 13px rgb(211 211 211 / 11%);
-      top: 100%;
-      left: 50%;
+      top: 68%;
+      left: -112%;
       transition: all 0.4s;
       z-index: 57;
     }
@@ -109,6 +137,7 @@ body {
     }
 
     &-text {
+      display: block;
       position: relative;
       max-width: 6.25vw;
       text-align: left;
@@ -132,6 +161,11 @@ body {
       height: 1.822916667vw;
       background: #F8F8F8;
       border-radius: 500px;
+
+      img {
+        width: 0.78125vw;
+        height: 0.78125vw;
+      }
     }
 
     &-text {
@@ -181,6 +215,11 @@ body {
       align-items:center;
       justify-content: center;
       border-radius: 500px;
+
+      img {
+        width: 44%;
+        height: 44%;
+      }
     }
 
     &-whatsup {
@@ -206,19 +245,38 @@ body {
     }
 
     &-telephone-for-call {
+      cursor: pointer;
       display: flex;
+      align-items:center;
       font-weight: 700;
       font-size: 1.041666667vw;
       line-height: 1.261vw;
+      transition: .3s;
+
+      img {
+        width: 0.46875vw;
+        height: 0.260416667vw;
+      }
+
+      &:hover {
+        color: $text-hover-color;
+      }
     }
 
     &-call-request {
+      cursor: pointer;
       position: relative;
       display: flex;
+      align-items:center;
       font-weight: 400;
       font-size: 0.625vw;
       line-height: 0.720833333vw;
       letter-spacing: 0.05em;
+
+      img {
+        width: 0.3125vw;
+        height: 0.3125vw;
+      }
     }
   }
 
@@ -241,17 +299,59 @@ body {
   }
 }
 
-  // Доп классы для повторяющихся задач
+.header-nav {
+  height: 3.3333333vw;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
 
-  .active {
-    transform: translateX(-50%);
-    opacity: 1 !important;
-    pointer-events: auto;
+  .nav-item {
+    font-weight: 600;
+    font-size: 0.625vw;
+    line-height: 0.833333333vw;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: .3s;
+    color: $primary-color;
+    &:hover {
+      color: $text-hover-color;
+    }
+  }
+}
+
+//MAIN_SECTION--MAIN_SECTION--MAIN_SECTION--MAIN_SECTION--MAIN_SECTION
+.main-section {
+  position: relative;
+  padding-top: 6.6666667vw;
+
+  &__bg {
+    z-index: -2;
   }
 
- .pointer {
-  cursor: pointer;
- } 
+  &__bg-shadow {
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(22, 26, 30, 0.75) 0%, rgba(22, 26, 30, 0.2925) 36.3%);
+  }
+
+  &__bg, 
+  &__bg-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 47.447916667vw;
+ }
+} 
+
+
+
+// Доп классы для повторяющихся задач
+
+.active {
+  display: block !important;
+  opacity: 1 !important;
+  pointer-events: auto;
+}
 
 .mb-6 {
   margin-bottom: 0.3125vw;
@@ -269,6 +369,7 @@ body {
   margin-right: 0.520833333vw;
 }
 
-.flex {
+.flex-align-center {
   display: flex;
+  align-items: center;
 }
