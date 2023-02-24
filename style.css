@@ -19,6 +19,12 @@ body {
   overflow-y: scroll;
 }
 
+h1 {
+  font-weight: 400;
+  font-size: 3.385416667vw;
+  line-height: 4.947916667vw;
+}
+
 .page__wrapper {
   min-height: 100%;
   position: relative;
@@ -98,14 +104,14 @@ body {
   width: 26.041666667vw;
   height: 20.833333333vw;
   background-color: #fff;
-  box-shadow: 3px 0 13px rgba(211, 211, 211, 0.11);
+  box-shadow: 0.15625vw 0 0.677083333vw rgba(211, 211, 211, 0.11);
   top: 68%;
   left: -112%;
   transition: all 0.4s;
   z-index: 57;
 }
 .header-top__watch-on-map-icon {
-  transform: translateY(4px);
+  transform: translateY(0.208333333vw);
 }
 .header-top__watch-on-map-text {
   display: block;
@@ -129,14 +135,14 @@ body {
   width: 1.822916667vw;
   height: 1.822916667vw;
   background: #F8F8F8;
-  border-radius: 500px;
+  border-radius: 26.041666667vw;
 }
 .header-top__calculator-icon img {
   width: 0.78125vw;
   height: 0.78125vw;
 }
 .header-top__calculator-text {
-  transform: translateY(-2px);
+  transform: translateY(-0.104166667vw);
   max-width: 7.656vw;
   text-align: left;
 }
@@ -171,7 +177,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 500px;
+  border-radius: 26.0416666667vw;
 }
 .header-top__social-links-whatsup img, .header-top__social-links-telegram img, .header-top__social-links-viber img {
   width: 44%;
@@ -278,10 +284,140 @@ body {
   width: 100vw;
   height: 47.447916667vw;
 }
+.main-section__wrapper {
+  padding-left: 5.989583333vw;
+  padding-right: 7.395833333vw;
+}
+.main-section .top-content {
+  margin-bottom: 6.458333333vw;
+}
+.main-section .top-content .content-title {
+  max-height: 14.114583333vw;
+  max-width: 52.65625vw;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 2.34375vw;
+}
+.main-section .top-content .content-description {
+  font-weight: 400;
+  font-size: 1.40625vw;
+  line-height: 2.34375vw;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 2.34375vw;
+}
+.main-section .top-content .btns-container {
+  display: flex;
+}
+.main-section .top-content .btn-calculator {
+  position: relative;
+  align-items: center;
+  background-color: #FD2016;
+  color: #ffffff;
+}
+.main-section .top-content .btn-calculator:hover {
+  background-color: rgba(255, 0, 0, 0.631372549);
+}
+.main-section .top-content .btn-calculator:hover img {
+  transform: rotateZ(45deg);
+}
+.main-section .top-content .btn-calculator span {
+  width: 13.28125vw;
+  text-align: center;
+}
+.main-section .top-content .btn-calculator img {
+  width: 1.145833333vw;
+  height: 1.145833333vw;
+  transition: 0.5s;
+}
+.main-section .top-content .btn-transparent {
+  position: relative;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  border: 0.052083333vw solid #FFFFFF;
+  color: #ffffff;
+  transition: 0.5s;
+}
+.main-section .top-content .btn-transparent:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.main-section .top-content .btn-transparent:hover img {
+  transform: rotateZ(360deg);
+}
+.main-section .top-content .btn-transparent img {
+  width: 1.5625vw;
+  height: 1.5625vw;
+  transition: 0.5s;
+}
+.main-section .bullets-content .flex-container {
+  display: flex;
+}
+.main-section .bullets-content .bullets-item {
+  min-width: 7.395833333vw;
+  max-width: 20vw;
+  height: 7.96875vw;
+  display: flex;
+  box-sizing: content-box;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  line-height: 1.3541666667vw;
+  color: #ffffff;
+}
+.main-section .bullets-content .bullets-item:not(:last-of-type) {
+  padding-right: 4.947916667vw;
+  border-right: 0.052083333vw solid rgba(255, 255, 255, 0.25);
+}
+.main-section .bullets-content .bullets-item:not(:first-of-type) {
+  padding-left: 4.947916667vw;
+}
+.main-section .bullets-content .bullets-item img {
+  margin-bottom: 1.010416667vw;
+  width: 0.6875vw;
+  height: 0.5vw;
+}
+
+.standart-btn {
+  cursor: pointer;
+  width: 20.833333333vw;
+  height: 5.208333333vw;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.816326531vw;
+  line-height: 1.25vw;
+  border-radius: 26.0416666667vw;
+  transition: 0.5s;
+  overflow: hidden;
+  text-decoration: none;
+}
+@keyframes btn_blick {
+  0% {
+    left: -50%;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+.standart-btn::after {
+  content: "";
+  width: 5.9895833333vw;
+  height: 7.2916666667vw;
+  position: absolute;
+  left: 0;
+  background-image: url(img/btn-blick.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation: btn_blick 5s linear infinite;
+  transition: 0.5s;
+}
 
 .active {
   display: block !important;
-  opacity: 1 !important;
   pointer-events: auto;
 }
 
@@ -299,6 +435,14 @@ body {
 
 .mr-10 {
   margin-right: 0.520833333vw;
+}
+
+.mr-12 {
+  margin-right: 0.625vw;
+}
+
+.mr-22 {
+  margin-right: 1.145833333vw;
 }
 
 .flex-align-center {

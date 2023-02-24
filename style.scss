@@ -1,5 +1,6 @@
 $font-stack: Manrope, sans-serif;
 $primary-color: #2A2A2A;
+$main-section-color: #ffffff;
 $text-hover-color: #d91967;
 
 *,
@@ -21,6 +22,12 @@ body {
   color: $primary-color;
   overflow-x: hidden;
   overflow-y: scroll;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 3.385416667vw;
+  line-height: 4.947916667vw;
 }
 
 .page__wrapper {
@@ -125,7 +132,7 @@ body {
       width: 26.041666667vw;
       height: 20.833333333vw;
       background-color: #fff;
-      box-shadow: 3px 0 13px rgb(211 211 211 / 11%);
+      box-shadow: 0.15625vw 0 0.677083333vw rgb(211 211 211 / 11%);
       top: 68%;
       left: -112%;
       transition: all 0.4s;
@@ -133,7 +140,7 @@ body {
     }
 
     &-icon {
-      transform: translateY(4px);
+      transform: translateY(0.208333333vw);
     }
 
     &-text {
@@ -160,7 +167,7 @@ body {
       width: 1.822916667vw;
       height: 1.822916667vw;
       background: #F8F8F8;
-      border-radius: 500px;
+      border-radius: 26.041666667vw;
 
       img {
         width: 0.78125vw;
@@ -169,7 +176,7 @@ body {
     }
 
     &-text {
-      transform: translateY(-2px);
+      transform: translateY(-0.104166667vw);
       &:hover {
         .bottom-dots-actions::after {
           width: 60%;
@@ -214,7 +221,7 @@ body {
       display: flex;
       align-items:center;
       justify-content: center;
-      border-radius: 500px;
+      border-radius: 26.0416666667vw;
 
       img {
         width: 44%;
@@ -340,16 +347,167 @@ body {
   left: 0;
   width: 100vw;
   height: 47.447916667vw;
- }
+  }
+
+  &__wrapper {
+    padding-left: 5.989583333vw;
+    padding-right: 7.395833333vw;
+  }
+
+  .top-content {
+    margin-bottom: 6.458333333vw;
+
+    .content-title {
+      max-height: 14.114583333vw;
+      max-width: 52.65625vw;
+      letter-spacing: 0.02em;
+      color: $main-section-color;
+      margin-bottom: 2.34375vw;
+    }
+
+    .content-description {
+      font-weight: 400;
+      font-size: 1.40625vw;
+      line-height: 2.34375vw;
+      letter-spacing: 0.02em;
+      color: $main-section-color;
+      margin-bottom: 2.34375vw;
+    }
+
+    .btns-container {
+      display: flex;
+    }
+
+    .btn-calculator {
+      position: relative;
+      align-items:center;
+      background-color: #FD2016;
+      color: $main-section-color;
+
+      &:hover {
+        background-color: #ff0000a1;
+        img {
+          transform: rotateZ(45deg);
+        }
+      }
+
+      span {
+        width: 13.28125vw;
+        text-align: center;
+      }
+
+      img {
+        width: 1.145833333vw;
+        height: 1.145833333vw;
+        transition: .5s;
+      }
+    }
+
+    .btn-transparent {
+      position: relative;
+      align-items:center;
+      background: rgba(0, 0, 0, 0.45);
+      border: 0.052083333vw solid #FFFFFF;
+      color: $main-section-color;
+      transition: .5s;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.9);
+        img {
+          transform: rotateZ(360deg);
+        }
+      }
+
+      img {
+        width: 1.5625vw;
+        height: 1.5625vw;
+        transition: .5s; 
+      }
+    }
+  }
+
+  .bullets-content {
+    .flex-container {
+      display: flex;
+    }
+
+    .bullets-item {
+      min-width: 7.395833333vw;
+      max-width: 20vw;
+      height: 7.96875vw;
+      display: flex;
+      box-sizing: content-box;
+      flex-direction: column;
+      font-weight: 400;
+      font-size: .8333333333vw;
+      line-height: 1.3541666667vw;
+      color: $main-section-color;
+
+      &:not(:last-of-type) {
+        padding-right: 4.947916667vw;
+        border-right: 0.052083333vw solid rgba(255, 255, 255, 0.25);
+      }
+
+      &:not(:first-of-type) {
+        padding-left: 4.947916667vw;
+      }
+
+      img {
+        margin-bottom: 1.010416667vw;
+        width: 0.6875vw;
+        height: 0.5vw;
+      }
+    }
+  }
 } 
 
 
 
-// Доп классы для повторяющихся задач
+// Доп классы для повторяющихся задач (библиотека проекта)
+
+.standart-btn {
+  cursor: pointer;
+  width: 20.833333333vw;
+  height: 5.208333333vw;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.816326531vw;
+  line-height: 1.25vw;
+  border-radius: 26.0416666667vw;
+  transition: .5s;
+  overflow: hidden;
+  text-decoration: none;
+
+  @keyframes btn_blick {
+    0% {
+      left: -50%;
+    }
+    50% {
+      left: 50%;
+    }
+    100% {
+      left: 150%;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 5.9895833333vw;
+    height: 7.2916666667vw;
+    position: absolute;
+    left: 0;
+    background-image: url(img/btn-blick.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: btn_blick 5s linear infinite;
+    transition: .5s;
+  }
+}
 
 .active {
   display: block !important;
-  opacity: 1 !important;
   pointer-events: auto;
 }
 
@@ -367,6 +525,14 @@ body {
 
 .mr-10 {
   margin-right: 0.520833333vw;
+}
+
+.mr-12 {
+  margin-right: 0.625vw;
+}
+
+.mr-22 {
+  margin-right: 1.145833333vw;
 }
 
 .flex-align-center {
