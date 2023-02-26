@@ -29,14 +29,14 @@ $(document).ready(function() {
     }
   });
   
-  if ($(window).width() <= 320) {
+  if ($(window).width() <= 425) {
     $('.header').addClass('header-fixed');
   }
 
   $(window).on('scroll', function() {
     var scrollPosition = $(this).scrollTop();
 
-    if ($(window).width() <= 320) {
+    if ($(window).width() <= 425) {
       if (scrollPosition > 1) {
         $('.header-fixed').css('background-color', 'white');
         $('.header-top__contacts-work-hours, .header-top__contacts-telephone-for-call,' +

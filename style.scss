@@ -92,7 +92,7 @@ h1 {
 .header__wrapper {
   margin:0 7.1875vw;
 
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 425px) {
     width: 84vw;
     margin: 0 6.875vw;
     background-color: transparent;
@@ -106,7 +106,7 @@ h1 {
   border-bottom: 0.052083333vw solid rgba(42, 42, 42, 0.15);
   background-color: #fff;
   
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 425px) {
     justify-content: flex-end;
     align-items: center;
     border-bottom: none;
@@ -138,7 +138,7 @@ h1 {
     height: 2.604166667vw;
     margin-right: 1.197916667vw;
 
-    @media (max-width: 320px) {
+    @media (max-width: 425px) {
       margin-right: auto;
       width: 28.75vw;
       height: 6.875vw;
@@ -324,7 +324,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
 
-    @media only screen and (max-width: 320px) {
+    @media only screen and (max-width: 425px) {
         margin-right: 8vw;
       }
 
@@ -336,7 +336,7 @@ h1 {
       margin-bottom: 0.3125vw;
 
 
-      @media only screen and (max-width: 320px) {
+      @media only screen and (max-width: 425px) {
         font-size: 1.875vw;
         line-height: 3.125vw;
         color: #ffffff;
@@ -358,7 +358,7 @@ h1 {
         margin-right: 0.3125vw;
       }
 
-      @media only screen and (max-width: 320px) {
+      @media only screen and (max-width: 425px) {
         font-size: 3.75vw;
         line-height: 3.125vw;
         color: #ffffff;
@@ -385,7 +385,7 @@ h1 {
       line-height: 0.720833333vw;
       letter-spacing: 0.05em;
 
-      @media only screen and (max-width: 320px) {
+      @media only screen and (max-width: 425px) {
         font-size:1.875vw;
         line-height: 3.5625vw;
         color: #ffffff;
@@ -399,7 +399,7 @@ h1 {
         width: 0.3125vw;
         height: 0.3125vw;
 
-        @media only screen and (max-width: 320px) {
+        @media only screen and (max-width: 425px) {
           width: 1.875vw;
           height: 1.875vw;
         }
@@ -470,14 +470,14 @@ h1 {
   }
 
   &__bg-shadow {
-    @media only screen and (max-width: 320px) {
+    @media only screen and (max-width: 425px) {
       height: 159.6875vw;
       top: -28.875vw;
     } 
   }
 
   &__bg {
-    @media only screen and (max-width: 320px) {
+    @media only screen and (max-width: 425px) {
       top: -28.875vw;
       left: -118vw;
       height: 159.6875vw;
@@ -489,7 +489,7 @@ h1 {
     margin-left: 5.989583333vw;
     margin-right: 7.395833333vw;
 
-    @media only screen and (max-width: 320px) {
+    @media only screen and (max-width: 425px) {
       margin: 0 6.875vw;
       padding-left: 0vw;
       padding-right: 0vw;
@@ -499,7 +499,7 @@ h1 {
   .top-content {
     margin-bottom: 1.7333333vw;
 
-    @media (max-width: 320px) {
+    @media (max-width: 425px) {
       margin-bottom: 9.4125vw;
     }
 
@@ -510,7 +510,7 @@ h1 {
       color: $main-section-color;
       margin-bottom: 2.34375vw;
 
-      @media only screen and (max-width: 320px) {
+      @media only screen and (max-width: 425px) {
         max-height: 43.4375vw;
         max-width: 86.25vw;
         font-size: 6.25vw;
@@ -527,7 +527,7 @@ h1 {
       color: $main-section-color;
       margin-bottom: 2.34375vw;
 
-      @media only screen and (max-width: 320px) {
+      @media only screen and (max-width: 425px) {
         max-width: 80.9375vw;
         font-size: 3.75vw;
         line-height:5.625vw;
@@ -538,7 +538,7 @@ h1 {
     .btns-container {
       display: flex;
 
-      @media only screen and (max-width: 320px) {
+      @media only screen and (max-width: 425px) {
         flex-direction: column;
       }
     }
@@ -551,7 +551,7 @@ h1 {
       margin-right: 1.145833333vw;
       margin-bottom: 4.6875vw;
 
-      @media only screen and (max-width: 320px) {
+      @media only screen and (max-width: 425px) {
         margin-right: 0;
       }
 
@@ -566,7 +566,7 @@ h1 {
         width: 13.28125vw;
         text-align: center;
         
-        @media (max-width: 320px) {
+        @media (max-width: 425px) {
           width: 78.4375vw;
         }
       }
@@ -604,7 +604,7 @@ h1 {
       }
 
       .wthatsup-mobile-only {
-        @media (max-width: 320px) {
+        @media (max-width: 425px) {
           color: #20C863;
         }
       }
@@ -615,7 +615,7 @@ h1 {
     .flex-container {
       display: flex;
 
-      @media (max-width: 320px) {
+      @media (max-width: 425px) {
         flex-wrap: wrap;
         justify-content: space-between;
       }
@@ -634,7 +634,7 @@ h1 {
       color: $main-section-color;
       flex-basis: 47%;
 
-      @media (max-width: 320px) {
+      @media (max-width: 425px) {
         padding-top: 4.6875vw;
         min-width: 26.875vw;
         max-width: 44.6875vw;
@@ -648,7 +648,7 @@ h1 {
         padding-right: 4.947916667vw;
         border-right: 0.052083333vw solid rgba(255, 255, 255, 0.25);
         
-        @media (max-width: 320px) {
+        @media (max-width: 425px) {
           padding-right: 0;
           border-right: none;
         }
@@ -657,7 +657,7 @@ h1 {
       &:not(:first-of-type) {
         padding-left: 4.947916667vw;
 
-        @media (max-width: 320px) {
+        @media (max-width: 425px) {
           padding-left: 0;
         }
       }
@@ -667,7 +667,7 @@ h1 {
         width: 0.6875vw;
         height: 0.5vw;
 
-        @media (max-width: 320px) {
+        @media (max-width: 425px) {
           width: 4.125vw;
           height: 3vw;
         }
@@ -717,7 +717,7 @@ h1 {
 }
 
 .desktop-only {
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 425px) {
     display: none !important;
   }
 }
@@ -742,7 +742,7 @@ h1 {
   overflow: hidden;
   text-decoration: none;
 
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 425px) {
     width: 86.25vw;
     height: 18.75vw;
     font-size: 3.125vw;
