@@ -1,6 +1,7 @@
 *,
 *:before,
 *:after {
+  outline: 0;
   margin: 0;
   box-sizing: border-box;
 }
@@ -16,6 +17,20 @@ body {
   color: #2A2A2A;
   overflow-x: hidden;
   overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  width: 1.2vw;
+  background-color: white;
+}
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+body::-webkit-scrollbar-thumb {
+  border: 3px solid #FFFFFF;
+  background-color: #E1E6F0;
+  border-radius: 6px;
 }
 
 h1 {
@@ -72,7 +87,7 @@ h1 {
 }
 
 .header {
-  transition: 0.3;
+  transition: 0.3s;
 }
 
 .header__wrapper {
@@ -296,7 +311,6 @@ h1 {
   font-weight: 700;
   font-size: 1.041666667vw;
   line-height: 1.261vw;
-  transition: 0.3s;
   margin-bottom: 0.3125vw;
 }
 .header-top__contacts-telephone-for-call p {
@@ -347,6 +361,9 @@ h1 {
     height: 1.875vw;
   }
 }
+.header-top__burger {
+  cursor: pointer;
+}
 .header-top .bottom-dots-actions::after {
   content: "";
   width: 100%;
@@ -362,13 +379,13 @@ h1 {
   width: 60%;
 }
 
-.header-nav {
+.header-nav, .header-nav-mobile {
   height: 3.3333333vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header-nav .nav-item {
+.header-nav .nav-item, .header-nav-mobile .nav-item {
   font-weight: 600;
   font-size: 0.625vw;
   line-height: 0.833333333vw;
@@ -377,13 +394,28 @@ h1 {
   transition: 0.3s;
   color: #2A2A2A;
 }
-.header-nav .nav-item:hover {
+.header-nav .nav-item:hover, .header-nav-mobile .nav-item:hover {
+  color: #d91967;
+}
+.header-nav .nav-sub-item, .header-nav-mobile .nav-sub-item {
+  font-weight: 400;
+  font-size: 3.75vw;
+  line-height: 7.8125vw;
+  transition: 0.3s;
+  color: #929292;
+}
+.header-nav .nav-sub-item:hover, .header-nav-mobile .nav-sub-item:hover {
   color: #d91967;
 }
 
 .main-section {
   position: relative;
   padding-top: 6.6666667vw;
+}
+@media only screen and (max-width: 425px) {
+  .main-section {
+    margin-top: 18vw;
+  }
 }
 .main-section__bg {
   z-index: -2;
@@ -508,6 +540,9 @@ h1 {
 .main-section .top-content .btn-calculator .whatsup-green-icon {
   margin-right: 0.625vw;
 }
+.main-section .top-content .whatsup__mobile {
+  color: #20C863;
+}
 .main-section .top-content .btn-transparent {
   position: relative;
   align-items: center;
@@ -595,6 +630,107 @@ h1 {
   }
 }
 
+.popup {
+  pointer-events: none;
+  z-index: 10000;
+  overflow-x: hidden;
+  overflow-y: overlay;
+  padding-top: 2.6041666667vw;
+  padding-bottom: 2.6041666667vw;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.popup::-webkit-scrollbar {
+  width: 11px;
+  background-color: transparent;
+}
+.popup::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.popup::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  background-color: transparent;
+  border-radius: 6px;
+}
+.popup__blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.7;
+  z-index: 1;
+  transition: 0.3s;
+}
+.popup__container {
+  margin: auto;
+  z-index: 2;
+}
+.popup__block {
+  width: 26.0416666667vw;
+  overflow: hidden;
+  position: relative;
+  background-color: #202421;
+  display: flex;
+  align-items: stretch;
+}
+.popup__content {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 2.6041666667vw;
+}
+.popup .content-title {
+  font-size: 1.25vw;
+  line-height: 1.8229166667vw;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1.8229166667vw;
+}
+.popup .content-text {
+  font-size: 0.9375vw;
+  line-height: 1.4583333333vw;
+  text-align: center;
+  margin-bottom: 1.8229166667vw;
+}
+.popup .standart-btn {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: unset;
+  background-color: #FD2016;
+  font-size: 0.833333333vw;
+  line-height: 1.25vw;
+  color: white;
+  margin-bottom: 1.302083333vw;
+}
+.popup__close {
+  position: absolute;
+  top: 1.8229166667vw;
+  right: 1.8229166667vw;
+  width: 1.0416666667vw;
+  height: 1.0416666667vw;
+  cursor: pointer;
+  z-index: 10;
+}
+.popup__close img {
+  width: 100%;
+}
+
 .open-burger {
   background-color: white;
 }
@@ -613,13 +749,20 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
 }
+@media only screen and (max-width: 425px) {
+  .open-burger .header-nav {
+    margin-top: 22vw;
+  }
+}
 .open-burger .nav-item {
   font-size: 5vw;
-  line-height: 6.875vw;
+  line-height: 11.875vw;
 }
 
 .header-fixed {
-  position: sticky;
+  padding-right: 6.875vw;
+  padding-left: 6.875vw;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -632,10 +775,74 @@ h1 {
   }
 }
 
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 425px) {
   .mobile-only {
     display: none !important;
   }
+}
+
+.form-input {
+  width: 100%;
+  height: 5.2083333333vw;
+  border-radius: 26.0416666667vw;
+  background: #f9f9f9;
+  border: 0;
+  color: #1c1c1c;
+  line-height: 1.3020833333vw;
+  padding: 0 2.6041666667vw;
+  font-size: 0.8333333333vw;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 0.833333vw;
+  margin-bottom: 0.83333vw;
+}
+
+.checkbox-icon {
+  width: 1.25vw;
+  height: 1.25vw;
+  margin-right: 0.5208333333vw;
+  flex-shrink: 0;
+  border: 0.0520833333vw solid #FD2016;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.2604166667vw;
+  cursor: pointer;
+  position: relative;
+}
+.checkbox-icon img {
+  width: 0.5208333333vw;
+  height: 0.4166666667vw;
+  opacity: 0;
+  transform: translateX(0.854167vw);
+  transition: 0.3s;
+}
+
+.checked {
+  background-color: #FD2016;
+}
+.checked img {
+  opacity: 1 !important;
+}
+
+.politika {
+  color: #FD2016;
+}
+
+.form-btn {
+  margin: 0;
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.816326531vw;
+  line-height: 1.25vw;
+  border-radius: 26.0416666667vw;
+  transition: 0.5s;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .standart-btn {
@@ -672,6 +879,20 @@ h1 {
   background-position: center center;
   animation: btn_blick 5s linear infinite;
   transition: 0.5s;
+}
+
+.open {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+}
+
+.close {
+  opacity: 0;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .active {
