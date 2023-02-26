@@ -22,6 +22,11 @@ body::-webkit-scrollbar {
   width: 1.2vw;
   background-color: white;
 }
+@media only screen and (max-width: 425px) {
+  body::-webkit-scrollbar {
+    width: 0vw;
+  }
+}
 body::-webkit-scrollbar-track {
   background-color: transparent;
   border-top-right-radius: 6px;
@@ -537,9 +542,6 @@ h1 {
   height: 1.145833333vw;
   transition: 0.5s;
 }
-.main-section .top-content .btn-calculator .whatsup-green-icon {
-  margin-right: 0.625vw;
-}
 .main-section .top-content .whatsup__mobile {
   color: #20C863;
 }
@@ -561,6 +563,9 @@ h1 {
   width: 1.5625vw;
   height: 1.5625vw;
   transition: 0.5s;
+}
+.main-section .top-content .btn-transparent .whatsup-green-icon {
+  margin-right: 0.625vw;
 }
 @media (max-width: 425px) {
   .main-section .top-content .btn-transparent .wthatsup-mobile-only {
@@ -649,7 +654,7 @@ h1 {
   bottom: 0;
 }
 .popup::-webkit-scrollbar {
-  width: 11px;
+  width: 1vw;
   background-color: transparent;
 }
 .popup::-webkit-scrollbar-track {
@@ -685,6 +690,11 @@ h1 {
   display: flex;
   align-items: stretch;
 }
+@media (max-width: 425px) {
+  .popup__block {
+    width: 93.75vw;
+  }
+}
 .popup__content {
   width: 100%;
   height: auto;
@@ -700,11 +710,25 @@ h1 {
   text-transform: uppercase;
   margin-bottom: 1.8229166667vw;
 }
+@media (max-width: 425px) {
+  .popup .content-title {
+    font-size: 5vw;
+    line-height: 6.25vw;
+    margin-bottom: 4.6875vw;
+  }
+}
 .popup .content-text {
   font-size: 0.9375vw;
   line-height: 1.4583333333vw;
   text-align: center;
   margin-bottom: 1.8229166667vw;
+}
+@media (max-width: 425px) {
+  .popup .content-text {
+    font-size: 3.75vw;
+    line-height: 5vw;
+    margin-bottom: 3.125vw;
+  }
 }
 .popup .standart-btn {
   position: relative;
@@ -718,6 +742,22 @@ h1 {
   color: white;
   margin-bottom: 1.302083333vw;
 }
+.popup .standart-btn:hover {
+  background-color: rgba(238, 25, 14, 0.6588235294);
+}
+@media (max-width: 425px) {
+  .popup .standart-btn {
+    height: 18.75vw;
+    border-radius: 156.25vw;
+    padding: 0 7.8125vw;
+    font-size: 3.75vw;
+    line-height: 7.8125vw;
+  }
+  .popup .standart-btn::after {
+    width: 20.3125vw;
+    height: 25vw;
+  }
+}
 .popup__close {
   position: absolute;
   top: 1.8229166667vw;
@@ -727,8 +767,36 @@ h1 {
   cursor: pointer;
   z-index: 10;
 }
+@media (max-width: 425px) {
+  .popup__close {
+    top: 3.125vw;
+    right: 3.125vw;
+    width: 3.125vw;
+    height: 3.125vw;
+  }
+}
 .popup__close img {
   width: 100%;
+}
+.popup .item-label {
+  margin-left: 2vw;
+}
+@media (max-width: 425px) {
+  .popup .item-label {
+    font-size: 3.125vw;
+    line-height: 4.6875vw;
+    margin-left: 8vw;
+  }
+}
+.popup .checkbox-text {
+  font-size: 0.6770833333vw;
+  line-height: 1.0416666667vw;
+}
+@media (max-width: 425px) {
+  .popup .checkbox-text {
+    font-size: 2.8125vw;
+    line-height: 4.6875vw;
+  }
 }
 
 .open-burger {
@@ -796,6 +864,18 @@ h1 {
   margin-top: 0.833333vw;
   margin-bottom: 0.83333vw;
 }
+.form-input:hover {
+  background: #d6d4d4;
+}
+@media only screen and (max-width: 425px) {
+  .form-input {
+    height: 18.75vw;
+    border-radius: 156.25vw;
+    padding: 0 7.8125vw;
+    font-size: 3.75vw;
+    line-height: 7.8125vw;
+  }
+}
 
 .checkbox-icon {
   width: 1.25vw;
@@ -811,12 +891,28 @@ h1 {
   cursor: pointer;
   position: relative;
 }
+@media (max-width: 425px) {
+  .checkbox-icon {
+    width: 4.6875vw;
+    height: 4.6875vw;
+    margin-right: 3.125vw;
+    border-radius: 1.5625vw;
+    border: 0.3125vw solid #FD2016;
+  }
+}
 .checkbox-icon img {
   width: 0.5208333333vw;
   height: 0.4166666667vw;
   opacity: 0;
   transform: translateX(0.854167vw);
   transition: 0.3s;
+}
+@media (max-width: 425px) {
+  .checkbox-icon img {
+    width: 1.875vw;
+    height: 1.5625vw;
+    transform: translateX(3.854167vw);
+  }
 }
 
 .checked {
