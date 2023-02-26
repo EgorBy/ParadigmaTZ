@@ -497,7 +497,7 @@ h1 {
   }
 
   .top-content {
-    margin-bottom: 6.458333333vw;
+    margin-bottom: 1.7333333vw;
 
     @media (max-width: 320px) {
       margin-bottom: 9.4125vw;
@@ -549,8 +549,11 @@ h1 {
       background-color: #FD2016;
       color: $main-section-color;
       margin-right: 1.145833333vw;
-      margin-right: 0;
       margin-bottom: 4.6875vw;
+
+      @media only screen and (max-width: 320px) {
+        margin-right: 0;
+      }
 
       &:hover {
         background-color: #ff0000a1;

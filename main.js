@@ -19,34 +19,37 @@ $(document).ready(function() {
   });
 
   $('.header-top__burder').on('click', function() {
-    $('.page__wrapper').toggleClass('open-burger')
-    $('.header-nav').toggleClass('desktop-only')
+    $('.page__wrapper').toggleClass('open-burger');
+    $('.header-nav').toggleClass('desktop-only');
   
     if ( $('.page__wrapper').hasClass('open-burger')) {
-      $('.header-top__burder img').attr('src', 'img/burger-black.svg')
+      $('.header-top__burder img').attr('src', 'img/burger-black.svg');
     } else {
-      $('.header-top__burder img').attr('src', 'img/burger.svg')
+      $('.header-top__burder img').attr('src', 'img/burger.svg');
     }
   });
   
   if ($(window).width() <= 320) {
-    $('.header').addClass('header-fixed')
-  };
+    $('.header').addClass('header-fixed');
+  }
 
   $(window).on('scroll', function() {
     var scrollPosition = $(this).scrollTop();
 
-
-    if (scrollPosition > 1) {
-      $('.header-fixed').css('background-color', 'white');
-      $('.header-top__contacts-work-hours, .header-top__contacts-telephone-for-call, .header-top__contacts-call-request').css('color', 'black')
-      $('.header-top__burder img').attr('src', 'img/burger-black.svg')
-    } else {
-      
-      $('.header-top__contacts-work-hours, .header-top__contacts-telephone-for-call, .header-top__contacts-call-request').css('color', 'white')
-      $('.header-fixed').css('background-color', 'transparent')
-      if ( !$('.page__wrapper').hasClass('open-burger')) {
-        $('.header-top__burder img').attr('src', 'img/burger.svg')
+    if ($(window).width() <= 320) {
+      if (scrollPosition > 1) {
+        $('.header-fixed').css('background-color', 'white');
+        $('.header-top__contacts-work-hours, .header-top__contacts-telephone-for-call,' +
+        '.header-top__contacts-call-request').css('color', 'black');
+        $('.header-top__burder img').attr('src', 'img/burger-black.svg');
+      } else {
+        
+        $('.header-top__contacts-work-hours, .header-top__contacts-telephone-for-call,' +
+         '.header-top__contacts-call-request').css('color', 'white');
+        $('.header-fixed').css('background-color', 'transparent');
+        if ( !$('.page__wrapper').hasClass('open-burger')) {
+          $('.header-top__burder img').attr('src', 'img/burger.svg');
+        }
       }
     }
   });

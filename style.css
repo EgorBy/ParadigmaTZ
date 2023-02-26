@@ -425,7 +425,7 @@ h1 {
   }
 }
 .main-section .top-content {
-  margin-bottom: 6.458333333vw;
+  margin-bottom: 1.7333333vw;
 }
 @media (max-width: 320px) {
   .main-section .top-content {
@@ -478,8 +478,12 @@ h1 {
   background-color: #FD2016;
   color: #ffffff;
   margin-right: 1.145833333vw;
-  margin-right: 0;
   margin-bottom: 4.6875vw;
+}
+@media only screen and (max-width: 320px) {
+  .main-section .top-content .btn-calculator {
+    margin-right: 0;
+  }
 }
 .main-section .top-content .btn-calculator:hover {
   background-color: rgba(255, 0, 0, 0.631372549);
